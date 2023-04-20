@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Morex - Personal Portfolio HTML Template</title>
-
+    <meta
+      name="description"
+      content="Rendi Julianto is a skilled web developer with a strong passion for creating exceptional web applications and websites. He has a deep understanding of web development technologies and frameworks, including HTML, CSS, JavaScript, PHP, and MySQL. Rendi has experience in both front-end and back-end development, enabling him to develop websites that are both visually appealing and functionally robust."
+    />
+    <meta
+      name="keywords"
+      content="Rendi Julianto, Web developer, Front-end developer, Back-end developer, HTML, CSS, JavaScript, PHP, MySQL, Web development technologies, User-friendly, Responsive, High-quality projects, Collaboration, Problem-solving, Client-focused, Trend-aware, Best practices."
+    />
+    <!-- thumbnail -->
+    <meta property="og:image" content="./assets/images/rendi.jpg" />
+    <title>Rendi Julianto - Portfolio</title>
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -455,21 +464,9 @@
               </button>
               <button
                 class="button text-primary dark:text-white text-[18px] capitalize font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300"
-                data-filter=".graphics"
+                data-filter=".photography"
               >
-                Graphics
-              </button>
-              <button
-                class="button text-primary dark:text-white text-[18px] capitalize font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300"
-                data-filter=".development"
-              >
-                Development
-              </button>
-              <button
-                class="button text-primary dark:text-white text-[18px] capitalize font-medium hover:text-accent1 dark:hover:text-accent1 transition duration-300"
-                data-filter=".mobile"
-              >
-                Mobile
+                Photography
               </button>
             </div>
             <div
@@ -589,7 +586,7 @@
                           </svg>
                         </button>
                         <h2 class="text-accent1 text-center font-bold">
-                          Illustration Project
+                          ${portfolio.title}
                         </h2>
                         <div class="grid grid-cols-1 lg:grid-cols-2 my-6">
                           <div class="space-y-2">
@@ -617,7 +614,7 @@
                                 </svg>
                               </span>
                               Project :&nbsp;
-                              <span class="font-medium"> ${type}</span>
+                              <span class="font-medium"> ${portfolio.title}</span>
                             </p>
                             <p class="dark:text-white flex items-center">
                               <span class="mr-2">
@@ -639,9 +636,8 @@
                                   <polyline points="8 6 2 12 8 18"></polyline>
                                 </svg>
                               </span>
-                              Languages :&nbsp;
-                              <span class="font-medium"
-                                >{${portfolio.languages}</span
+                              Languages :
+                              <span class="font-medium"> ${portfolio.languages}</span
                               >
                             </p>
                           </div>
@@ -670,7 +666,7 @@
                                 </svg>
                               </span>
                               Client :&nbsp;
-                              <span class="font-medium">Envato</span>
+                              <span class="font-medium"> ${portfolio.client}</span>
                             </p>
                             <p class="dark:text-white flex items-center">
                               <span class="mr-2">
@@ -701,7 +697,7 @@
                                   href="https://${portfolio.preview}"
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  >{${portfolio.preview}}</a
+                                  >${portfolio.preview}</a
                                 >
                               </span>
                             </p>
@@ -714,7 +710,7 @@
                         <div class="pr-3">
                           <img
                             class="max-w-full h-auto rounded-xl mt-6 mx-auto"
-                            src="./assets/images/portfolio/big-1.png"
+                            src="${portfolio.popupImage}"
                             alt="portfolio image"
                           />
                         </div>
@@ -729,36 +725,95 @@
         return html;
       };
 
-      let portfotolios = [];
+      let portfotolios = [
+        {
+          types: ["all", "web"],
+          title: "Inject | Warung Teh Usi",
+          image: "./assets/images/portfolio/warung_teh_usi_inject.png",
+          popupImage: "./assets/images/portfolio/warung_teh_usi_inject_big.png",
+          popupTitle: "Landing Page",
+          languages: "HTML, CSS, JS , LARAVEL",
+          client: "WARUNGTEHUSI",
+          preview: "https://www.warungtehusi.com",
+          description:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+          summary:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+        },
+        {
+          types: ["all", "web"],
+          title: "Kebutuhan Sosmed",
+          image: "./assets/images/portfolio/warung_teh_usi_inject.png",
+          popupImage: "./assets/images/portfolio/warung_teh_usi_inject_big.png",
+          popupTitle: "Landing Page",
+          languages: "HTML, CSS, JS, LARAVEL",
+          client: "WARUNGTEHUSI",
+          preview: "https://www.warungtehusi.com",
+          description:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+          summary:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+        },
+        {
+          types: ["all", "web"],
+          title: "Catatan Warung Teh Usi",
+          image: "./assets/images/portfolio/warung_teh_usi_inject.png",
+          popupImage: "./assets/images/portfolio/warung_teh_usi_inject_big.png",
+          popupTitle: "Landing Page",
+          languages: "HTML, CSS, JS, CODEIGNETER",
+          client: "WARUNGTEHUSI",
+          preview: "https://www.warungtehusi.com",
+          description:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+          summary:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+        },
+        {
+          types: ["all", "web"],
+          title: "Landing Page Vieri",
+          image: "./assets/images/portfolio/warung_teh_usi_inject.png",
+          popupImage: "./assets/images/portfolio/warung_teh_usi_inject_big.png",
+          popupTitle: "Landing Page",
+          languages: "HTML, CSS, JS, CODEIGNETER",
+          client: "WARUNGTEHUSI",
+          preview: "https://www.warungtehusi.com",
+          description:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+          summary:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+        },
+        {
+          types: ["all", "photography"],
+          title: "Pemandangan Alam",
+          image:
+            "https://www.shutterstock.com/image-photo/this-photo-captures-breathtaking-view-600w-2289056195.jpg",
+          popupImage:
+            "https://www.shutterstock.com/image-photo/this-photo-captures-breathtaking-view-600w-2289056195.jpg",
+          popupTitle: "Landing Page",
+          languages: "HTML, CSS, JS, CODEIGNETER",
+          client: "shutterstock",
+          preview:
+            "https://www.shutterstock.com/id/image-photo/this-photo-captures-breathtaking-view-tea-2289056199",
+          description:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+          summary:
+            "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
+        },
+      ];
       // add all portfolio items to array
-      let item = {
-        types: ["all", "web"],
-        title: "Inject | Warung Teh Usi",
-        image: "./assets/images/portfolio/warung_teh_usi_inject.png",
-        popupImage: "./assets/images/portfolio/warung_teh_usi_inject_big.png",
-        popupTitle: "Landing Page",
-        languages: "HTML, CSS, JS , LARAVEL, BOOSTRAP",
-        client: "WARUNGTEHUSI",
-        preview: "https://www.warungtehusi.com",
-        description:
-          "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
-        summary:
-          "Inject | Warung Tehusi merupakan website yang digunakan untuk melakukan inject voucher kosongan .",
-      };
-      portfotolios.push(item);
 
       // tunggu sampai semua element di load
-      window.addEventListener("load", () => {
-        // ambil element portfolio
-        const portfolio = document.getElementById("portfolio_show");
-        // looping semua portfolio
-        portfotolios.forEach((portfolioItem) => {
-          // buat element portfolio
-          const portfolioElement = getCardPortfolio(portfolioItem);
-          // tambahkan ke element portfolio
-          portfolio.innerHTML += portfolioElement;
-        });
+      // window.addEventListener("load", () => {
+      // ambil element portfolio
+      const portfolio = document.getElementById("portfolio_show");
+      // looping semua portfolio
+      portfotolios.forEach((portfolioItem) => {
+        // buat element portfolio
+        const portfolioElement = getCardPortfolio(portfolioItem);
+        // tambahkan ke element portfolio
+        portfolio.innerHTML += portfolioElement;
       });
+      // });
     </script>
   </body>
 </html>
